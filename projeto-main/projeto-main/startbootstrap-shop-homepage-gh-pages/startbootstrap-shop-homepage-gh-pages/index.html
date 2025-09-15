@@ -13,31 +13,57 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://github.com/CrisEryk/CrisErykDesignerWeb1/tree/36138371dcadc3559c4bc61e40ceb73ec1ed5bf6/projeto-main/projeto-main/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages">
+
+        <style>
+             body {
+    margin: 0; /* Remove espaço padrão do body */
+    height: 300vh; /* Faz o fundo ocupar 100% da tela */
+    
+    /* Define a imagem */
+    background-image: url(''); /* Caminho para a imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: repeat; /* Evita repetição */
+    justify-content: center;
+    align-items: center;    
+}
+
+        </style>
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Biblioteca Allora</a>
+                <a class="navbar-brand" href="#!" style="color: white;">Biblioteca Allora</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!" style="color: white;">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!" style="color: white;">Sobre</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Comprar</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Todos Produtos</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Itens Populares</a></li>
-                                <li><a class="dropdown-item" href="#!">Novos Itens</a></li>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Comprar</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(38, 37, 37);">
+                                <li><a class="dropdown-item" href="#!" style="color: white;">Todos Produtos</a></li>
+                                <li><hr class="dropdown-divider" style="background-color: white;"></li>
+                                <li><a class="dropdown-item" href="#!" style="color: white;">Itens Populares</a></li>
+                                <li><a class="dropdown-item" href="#!" style="color: white; ">Novos Itens</a></li>
                             </ul>
                         </li>
+                             <li class="nav-item dropdown" > 
+                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Enviar para</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black;">
+                                <div class="header-divider">
+                                <li><input type="text" placeholder="Cidade" class="dropdown-item" style="background-color: white;"></li>
+                                </div>
+                                <li><input type="text" placeholder="Endereço" class="dropdown-item" style="background-color: white"></li>
+                                <li><input type="text" placeholder="CEP" class="dropdown-item" style="background-color: white"></li>
+                    </ul>
+                    </li>
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark me-2" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Carrinho
+                            <i class="bi-cart-fill me-1" style="color: white;">
+                            Carrinho</i>
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
@@ -55,16 +81,16 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-dark py-5">
+        <header class="bg-light py-5" >
             <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
+                <div class="text-center text-black">
                     <h1 class=" fw-bolder">Bem-Vindo à nossa Biblioteca Virtual</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">A melhor experiência com e-books!</p>
+                    <p class=" text-50 mb-0" style="color: black;">A melhor experiência com e-books!</p>
                 </div>
             </div>
         </header>
         <!-- Section-->
-        <section class="py-5">
+        <section class="py-5" style="background-image: url(assets/backgroundimagedark.png)">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
