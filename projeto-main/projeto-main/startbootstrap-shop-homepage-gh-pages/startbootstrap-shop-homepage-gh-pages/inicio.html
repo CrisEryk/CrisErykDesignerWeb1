@@ -13,9 +13,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://github.com/CrisEryk/CrisErykDesignerWeb1/tree/36138371dcadc3559c4bc61e40ceb73ec1ed5bf6/projeto-main/projeto-main/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <style>
-             body {
+<style>
+body {
     margin: 0; /* Remove espaço padrão do body */
     height: 300vh; /* Faz o fundo ocupar 100% da tela */
     
@@ -27,14 +28,76 @@
     justify-content: center;
     align-items: center;    
 }
+/* Estilo do menu lateral */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #656565;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
-        </style>
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #000000;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #000000;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+}
+
+.openbtn {
+font-size: 20px;
+cursor: pointer;
+}
+
+#main {
+transition: margin-left .5s;
+}
+ </style>
     </head>
     <body>
         <!-- Navigation-->
+        
         <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white">
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#about">Sobre</a>
+    <a href="#services">Serviços</a>
+    <a href="#clients">Clientes</a>
+    <a href="#contact">Contato</a>
+</div>
+
+    <span class="openbtn" onclick="openNav()">☰ Menu</span>
+
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!" style="color: white;">Biblioteca Allora</a>
+                <a class="navbar-brand" href="#!" style="color: white;">Allora</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -42,27 +105,28 @@
                         <li class="nav-item"><a class="nav-link" href="#!" style="color: white;">Sobre</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Comprar</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(38, 37, 37);">
-                                <li><a class="dropdown-item" href="#!" style="color: white;">Todos Produtos</a></li>
-                                <li><hr class="dropdown-divider" style="background-color: white;"></li>
-                                <li><a class="dropdown-item" href="#!" style="color: white;">Itens Populares</a></li>
-                                <li><a class="dropdown-item" href="#!" style="color: white; ">Novos Itens</a></li>
+                            <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">Todos Produtos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#!">Itens Populares</a></li>
+                                <li><a class="dropdown-item" href="#!">Novos Itens</a></li>
                             </ul>
                         </li>
                              <li class="nav-item dropdown" > 
                              <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Enviar para</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black;">
-                                <div class="header-divider">
+                            <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown" >
                                 <li><input type="text" placeholder="Cidade" class="dropdown-item" style="background-color: white;"></li>
-                                </div>
+                                <li><hr class="dropdown-divider" style="background-color: white;"></li>
                                 <li><input type="text" placeholder="Endereço" class="dropdown-item" style="background-color: white"></li>
+                                <li><hr class="dropdown-divider" style="background-color: white;"></li>
                                 <li><input type="text" placeholder="CEP" class="dropdown-item" style="background-color: white"></li>
                     </ul>
                     </li>
                     </ul>
+            
                     <form class="d-flex">
                         <button class="btn btn-outline-dark me-2" type="submit">
-                            <i class="bi-cart-fill me-1" style="color: white;">
+                            <i class="fa-regular fa-star" style="color: #eba000;">
                             Carrinho</i>
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
@@ -81,36 +145,25 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-light py-5" >
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-black">
-                    <h1 class=" fw-bolder">Bem-Vindo à nossa Biblioteca Virtual</h1>
-                    <p class=" text-50 mb-0" style="color: black;">A melhor experiência com e-books!</p>
-                </div>
-            </div>
+        <header class="bg-light " >
+            <img src="./assets/bannerallora.png" style=" width: 100%; height: 40%; object-fit: cover;">
+            
         </header>
         <!-- Section-->
-        <section class="py-5" style="background-image: url(assets/backgroundimagedark.png)">
+        <section class="py-5 " style="background-image: url()">
+<div style="display: flex; align-items: center; border-radius: 6px; padding: 5px 10px; width: 250px; position: absolute; left: 6%; top: 68%;">
+  <i class="fa fa-search" style="margin-right: 9px; color: #b9b2b2;"></i>
+  <input type="text" placeholder="Pesquisar..." 
+         style="border: groove; outline: none; flex: 1;">
+</div>            
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-90" src="https://m.media-amazon.com/images/I/61YK-HDlPwL._UF1000,1000_QL80_.jpg" alt="..." />
                             <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Administração Pública</h5>
-                                    <!-- Product price-->
-                                    R$40.00 - R$80.00<br>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver Mais</a></div>
-                            </div>
-                        </div>
+                            
+                    
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
