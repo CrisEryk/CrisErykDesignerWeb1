@@ -13,31 +13,100 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://github.com/CrisEryk/CrisErykDesignerWeb1/tree/36138371dcadc3559c4bc61e40ceb73ec1ed5bf6/projeto-main/projeto-main/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+body {
+    margin: 0; /* Remove espaço padrão do body */
+    height: 300vh; /* Faz o fundo ocupar 100% da tela */
+    
+    /* Define a imagem */
+    background-image: url(''); /* Caminho para a imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: repeat; /* Evita repetição */
+    justify-content: center;
+    align-items: center;    
+}
+/* Estilo do menu lateral */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #656565;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #000000;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #000000;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+}
+
+.openbtn {
+font-size: 20px;
+cursor: pointer;
+}
+
+#main {
+transition: margin-left .5s;
+}
+ </style>
     </head>
-    <style>
-        input[type=search]{
-            width: 20%;
-            transition: all 1s ease-in-out;  
-        }
-        input[type=search]:focus{
-            width: 42%;
-        }
-    </style>
-    <body class="bg-light">
+    <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white; position: fixed; width: 100%; z-index: 2">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white">
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="http://127.0.0.1:5500/bibliotecaAllora.html">Biblioteca</a>
+    <a href="#services">Serviços</a>
+    <a href="#clients">Clientes</a>
+    <a href="#contact">Contato</a>
+</div>
+
+    <span class="openbtn" onclick="openNav()">☰ Menu</span>
+
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!" style="color: white;">Biblioteca Allora</a>
+                <a class="navbar-brand" href="#!" style="color: white;">Allora</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        
-                        <li class="nav-item"><a class="nav-link" href="#!" style="color: white;"><i class="fa-regular fa-star me-2" style="color: white;"></i>Favoritos</a><li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!" style="color: white;">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!" style="color: white;">Sobre</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Comprar</a>
                             <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item bg-light" href="#!">Todos Produtos</a></li>
+                                <li><a class="dropdown-item" href="#!">Todos Produtos</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#!">Itens Populares</a></li>
                                 <li><a class="dropdown-item" href="#!">Novos Itens</a></li>
@@ -45,34 +114,31 @@
                         </li>
                              <li class="nav-item dropdown" > 
                              <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Enviar para</a>
-                            <ul class="dropdown-menu bg-light m-1" aria-labelledby="navbarDropdown">
-                                <div class="header-divider">
-                                <li><input type="text" placeholder="Cidade" class="dropdown-item p-2" style="background-color: white;"></li>
-                                </div>
-                                <li><input type="text" placeholder="Endereço" class="dropdown-item p-2" style="background-color: white"></li>
-                                <li><input type="text" placeholder="CEP" class="dropdown-item p-2" style="background-color: white"></li>
-                            </ul>
-                        <li class="nav-item"><a class="nav-link" href="#!" style="color: gray;">Sobre</a></li>
+                            <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown" >
+                                <li><input type="text" placeholder="Cidade" class="dropdown-item" style="background-color: white;"></li>
+                                <li><hr class="dropdown-divider" style="background-color: white;"></li>
+                                <li><input type="text" placeholder="Endereço" class="dropdown-item" style="background-color: white"></li>
+                                <li><hr class="dropdown-divider" style="background-color: white;"></li>
+                                <li><input type="text" placeholder="CEP" class="dropdown-item" style="background-color: white"></li>
+                    </ul>
                     </li>
                     </ul>
+            
                     <form class="d-flex">
-                        <button class="btn btn-outline-light me-2" type="submit">
-                             <!--user 2 -> fas fa-user-circle
-                             lupa -> fas fa-search
-                             carrinho -> 	fas fa-shopping-cart -->
-                            <i class="fas fa-shopping-cart " style="color: ba;"></i>
+                        <button class="btn btn-outline-dark me-2" type="submit">
+                            <i class="fa-regular fa-star">
                             Carrinho</i>
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
                         </ul>
                         <li class="nav-link nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="navbarDropdown" aria-expanded="false"><i class="fas fa-user-circle me-2    "></i>Usuário   </a>
-                            <ul class="dropdown-menu bg-light m-1" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item p-2" href="#">Cadastrar-se</a></li>
-                                <li><a class="dropdown-item p-2" href="#">Login</a></li>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="navbarDropdown" aria-expanded="false"><img src="C:\Users\Aluno\Downloads\pngwing.com.png" style="height: 25px; width: 25px;" class="me-2">Usuário   </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Cadastrar-se</a></li>
+                                <li><a class="dropdown-item" href="#">Login</a></li>
                                 <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item p-2" href="#">Sair</a></li>
+                                <li><a class="dropdown-item" href="#">Sair</a></li>
                             </ul>
                         </li>
                 </div>
@@ -80,49 +146,38 @@
         </nav>
         <!-- Header-->
         <header class="bg-light">
-            <img src="C:\Users\Aluno\Downloads\alloraBanner.jpeg" style=" width: 100%; height: 400px; object-fit: cover;">
-            <div class="dropdown-divider"></div>
-        </header>
-        <header class="bg-light">   
-        <div class="navbar-nav navbar-expand-lg p-2 align-items-center mt-5">
-            <h2 class="text-center p-2 mb-2">Pesquise mais em nosso acervo</h2>
-            <input class="form-control mr-sm2 text-center" type="search" placeholder="Buscar" style="border-radius: 30px; height: 45px;">
-        </div>
+            <img src="./assets/bannerallora.png" style=" width: 100%; height: 40%; object-fit: cover;">
+            
         </header>
         <!-- Section-->
-        <section class="py-4">
+        <section class="py-5 " style="background-image: url()">
+<div style="display: flex; align-items: center; border-radius: 6px; padding: 5px 10px; width: 250px; position: absolute; left: 6%; top: 68%;">
+  <i class="fa fa-search" style="margin-right: 9px; color: #b9b2b2;"></i>
+  <input type="text" placeholder="Pesquisar..." 
+         style="border: groove; outline: none; flex: 1;">
+</div>            
+    <div class="container mt-5 text-center border-bottom">
+                <h3>Mais Vendidos em Eletrónicos</h3>
+            </div>
+
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top d-flex h-90" src="https://m.media-amazon.com/images/I/61YK-HDlPwL._UF1000,1000_QL80_.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Administração Pública</h5>
-                                    <!-- Product price-->
-                                    R$40.00 - R$80.00<br>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver Mais</a></div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-90" src="https://cdn.atenaeditora.com.br/atenaeditora/documentos/ebook_imagem/2662/conversions/Capa-site-Administra%C3%A7%C3%A3o-moderna-estrat%C3%A9gias-para-o-sucesso-organizacional-3-optimized.webp" alt="..." />
+                             <div class="container mt-4">
+                            <img class="card-img-top d-flex h-90" src="https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?wid=224&hei=224&fmt=webp-alpha" alt="..." />
+                            </div>
+                            <hr class="mt-5">
+                            
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Administração Moderna</h5>
+                                    <h5 class="fw-bolder">Iphone apple-iphone A17-lavender PRO</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -132,13 +187,52 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R$20.00</span>
-                                    R$18.00 <br>
+                                    <span class="text-muted text-decoration-line-through">R$8520.00</span>
+                                    R$6578.00 <br>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver Mais</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
+                            </div>
+                        </div>
+                        
+                            <!-- Product image-->
+                            <!-- Product details-->
+                            
+                    
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                            <!-- Product image-->
+                             <div class="container mt-4">
+                            <img class="card-img-top d-flex h-90" src="https://m.media-amazon.com/images/I/61O0fOqY27L._AC_SL1000_.jpg" alt="..." />
+                            </div>
+                            <br>
+                            <hr class="mt-1">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Apple iPad Pro Wi-Fi de 12,9 polegadas (Wi-Fi + Celular, 2 TB) - Prateado</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">R$5589.00</span>
+                                    R$3289.00 <br>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
                             </div>
                         </div>
                     </div>
@@ -147,12 +241,17 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-95" src="https://a-static.mlcdn.com.br/1500x1500/livro-introducao-a-teoria-geral-da-administracao/magazineluiza/222979400/83dca46f410bd5d01530fc1d3144c329.jpg" alt="..." />
+                             <div class="container mt-4">
+                            <img class="card-img-top d-flex h-95;" style="height: 120%;" src="https://m.media-amazon.com/images/I/713GzsYLBbL._AC_SL1500_.jpg" alt="..." />
+                            </div>
+                            <br><br><br>
+                            <hr class="mt-2">
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Teoria Geral da..</h5>
+                                     
+                                    <h5 class="fw-bolder">Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i7-13620H 16GB 512GB SSD </h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">R$50.00</span>
                                     R$25.00
