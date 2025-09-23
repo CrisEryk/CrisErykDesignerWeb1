@@ -75,7 +75,7 @@ transition: margin-left .5s;
     <body>
         <!-- Navigation-->
         
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white; position: fixed; width: 100%; z-index: 2">
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="http://127.0.0.1:5500/bibliotecaAllora.html">Biblioteca</a>
@@ -97,7 +97,7 @@ transition: margin-left .5s;
     </script>
 
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!" style="color: white;">Allora</a>
+                <a class="navbar-brand" href="#!" style="color: white;"><img src="image/"</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -169,15 +169,17 @@ transition: margin-left .5s;
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
                             <!-- Product image-->
                              <div class="container mt-4">
-                            <img class="card-img-top d-flex h-90" src="https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?wid=224&hei=224&fmt=webp-alpha" alt="..." />
-                            </div>
+                            <a href="http://127.0.0.1:5500/DetalhesCompradoItem.html">
+                                <img class="card-img-top d-flex h-90" 
+                                src="https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?wid=224&hei=224&fmt=webp-alpha" alt="..." />
+                            </div></a>
                             <hr class="mt-5">
                             
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Iphone apple-iphone A17-lavender PRO</h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">Iphone apple-iphone A17-lavender PRO</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -193,7 +195,7 @@ transition: margin-left .5s;
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://127.0.0.1:5500/DetalhesCompradoItem.html">Ver mais</a></div>
                             </div>
                         </div>
                         
@@ -216,7 +218,7 @@ transition: margin-left .5s;
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Apple iPad Pro Wi-Fi de 12,9 polegadas (Wi-Fi + Celular, 2 TB) - Prateado</h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">Apple iPad Pro Wi-Fi de 12,9 polegadas (Wi-Fi + Celular, 2 TB) - Prateado</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -251,7 +253,7 @@ transition: margin-left .5s;
                                 <div class="text-center">
                                     <!-- Product name-->
                                      
-                                    <h5 class="fw-bolder">Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i7-13620H 16GB 512GB SSD </h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">Notebook Lenovo IdeaPad Slim 3 15IRH10 Intel Core i7-13620H 16GB 512GB SSD </h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">R$50.00</span>
                                     R$25.00
@@ -259,19 +261,23 @@ transition: margin-left .5s;
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver Mais</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://127.0.0.1:5500/notlenovo.html">Ver Mais</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 w-30">
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-80" src="https://cdn.awsli.com.br/600x700/2495/2495784/produto/271177355dba9101c7b.jpg" alt="..." />
+                             <div class="container mt-2">
+                            <img class="card-img-top d-flex h-80" style="height: 107%;" src="https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg" alt="..." />
+                            </div>
+                            <br><br>
+                            <hr>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Conceitos da Administração</h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">Echo Dot (Geração mais recente) | O Echo Dot com o melhor som já lançado | Cor Preta</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -290,20 +296,32 @@ transition: margin-left .5s;
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        <div class="container mb-2">
+            <h3 class="text-center">Mais vendidos em Informática</h3>
+        </div>
+                <div class="container px-4 px-lg-5 mt-5">
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-80" src="https://chiavenato.com/pt-br-livros/wp-content/uploads/sites/20/2024/01/Livro-FUNDAMENTOS-DE-ADMINISTRACAO-Idalberto-Chiavenato-757x1024.webp" alt="..." />
+                            <div class="container mt-4">
+                            <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/71jDnDf3vXL._AC_SL1500_.jpg" alt="..." />
+                            </div>
+                            
+                            <hr>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Fundamentos da Administração</h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">PC Gamer Completo Intel Core i7 16GB SSD 512GB Monitor 19" Kit Gamer Strong Tech
+                                      </h5>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R$50.00</span>
-                                    R$25.00
+                                    <span class="text-muted text-decoration-line-through">R$1.700,02</span>
+                                    R$1.255.56
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -315,12 +333,16 @@ transition: margin-left .5s;
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-80" src="https://images.tcdn.com.br/img/img_prod/791959/administracao_para_a_vida_um_mapa_in_completo_para_o_exito_no_dia_a_dia_1244246563_1_cdad35c5f2f21eb75870202c4ead5592.jpg" alt="..." />
+                             <div class="container mt-3">
+                            <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/71fExkr1vWL._AC_SL1500_.jpg" alt="..." />
+                            </div>
+                            <br><br>
+                            <hr>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Administração para a Vida </h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">Samsung T350 - Monitor Gamer, 24", FHD, 75Hz, HDMI, VGA, Freesync, Preto </h5>
                                     <!-- Product price-->
                                     R$120.00 - R$280.00
                                 </div>
@@ -336,12 +358,16 @@ transition: margin-left .5s;
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/618mYyFtJnL._UF1000,1000_QL80_.jpg" alt="..." />
+                             <div class="container">
+                            <img class="card-img-top d-flex h-80" style="height: 90% ;" src="https://m.media-amazon.com/images/I/61rH3f1ncrL._AC_.jpg" alt="..." />
+                            </div>
+                            
+                            <hr style="position: inherit; top: -1.5%;">
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Administração de Empresas</h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">PC Gamer Mancer | AMD Ryzen 5 5600 | RX 580 8GB | 16GB DDR4 | SSD 480GB | Fonte 500W 80 Plus</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -351,8 +377,8 @@ transition: margin-left .5s;
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R$20.00</span>
-                                    R$18.00
+                                    <span class="text-muted text-decoration-line-through">R$3.299,90</span>
+                                    R$2.699,90
                                 </div>
                             </div> 
                             <!-- Product actions-->
@@ -364,12 +390,17 @@ transition: margin-left .5s;
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/91EthSZrdkL._UF894,1000_QL80_.jpg" alt="..." />
+                             <div class="container mt-5">
+                            <img class="card-img-top d-flex h-80" style="height: 100%;" src="https://m.media-amazon.com/images/I/61ft1gq785L._AC_SL1500_.jpg" alt="..." />
+                            </div>
+                            <br><br><br>
+                            <hr>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Administração de Recursos Humanos</h5>
+                                    <h5 class="fw-bolder" style="font-size: medium;">
+Teclado Magnético Gamer Redragon Kumara Pro V2 RGB Preto Switch Vermelho K552RGB-PRO (PT-RED) V2</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
