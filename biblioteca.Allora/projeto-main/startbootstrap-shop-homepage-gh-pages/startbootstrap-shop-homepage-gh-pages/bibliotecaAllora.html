@@ -17,7 +17,7 @@
     </head>
     <style>
         input[type=search]{
-            width: 15%;
+            width: 25%;
             transition: all 0.79s ease-in-out;  
         }
 
@@ -29,25 +29,30 @@
             opacity: 94%;
         }
 
-        .hover-card {
-            transition: transform 0.38s ease-in-out, box-shadow 0.38s ease-in-out;
-            cursor: pointer;
+        /* Estado inicial dos cards */
+        .card {
+            opacity: 0;               /* invisível no início */
+            transform: translateY(30px); /* desce 30px */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* animação suave */
         }
+
+        /* Quando o JS adiciona a classe show */
+        .card.show {
+            opacity: 1;               /* torna visível */
+            transform: translateY(0); /* volta para a posição normal */
+        }
+
+        /* Hover dos cards continua funcionando */
         .hover-card:hover {
-            box-shadow: 0px 11px 22px rgb(0,0,0,0.2);
-            transform: scale(1.02);
+            box-shadow: 0px 11px 22px rgba(0,0,0,0.2);
+            transform: translateY(-15px) scale(1.024);
+            transition: transform 0.38s ease-in-out, box-shadow 0.38s ease-in-out;
         }
-
-        .h3 {
-            opacity: 0;
-            position: translateY(0px);
-        }
-
         
     </style>
     <body class="bg-light">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white; position: fixed; width: 100%; z-index: 2">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark p-3" style="color:white; position: fixed; width: 100%; z-index: 2">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#!" style="color: white;">Biblioteca Allora</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -116,7 +121,7 @@
         <!-- Section-->
         <section class="py-4">
             <div class="container mt-5 text-center border-bottom" id="alvo">
-                <h3>Recomendações</h3>
+                <h2>Recomendações</h2>
             </div>
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -241,7 +246,7 @@
                 </div>
             </div>
             <div class="container text-center border-bottom mt-5" id="alvo">
-                <h3>Filosofia</h3>
+                <h2>Filosofia</h2>
             </div>
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -340,7 +345,7 @@
             </div>
 
             <div class="container text-center border-bottom mt-5" id="alvo">
-                <h3>Literatura Nacional</h3>
+                <h2>Literatura Nacional</h2>
             </div>
             
             <div class="container px-4 px-lg-5 mt-5">
@@ -433,7 +438,7 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    R$35,90<br>
+                                    R$24,90<br>
                                 </div>
                             </div>
                             <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
@@ -444,7 +449,7 @@
                 </div>
             </div>
             <div class="container text-center border-bottom mt-5" id="alvo">
-                <h3>Fantasia</h3>
+                <h2>Fantasia</h2>
             </div>
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -463,7 +468,7 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    R$35,90<br>
+                                    R$40,90<br>
                                 </div>
                             </div>
                             <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
@@ -477,7 +482,7 @@
                             <img class="card-img-top d-flex h-100 rounded" src="https://m.media-amazon.com/images/I/61bmaEI9amL._SL1005_.jpg" alt="..."/>
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="mb-auto mt-auto">Percy Jackson: O Mar de Monstros</h5>
+                                    <h5 class="mb-auto mt-auto">Percy Jackson e O Mar de Monstros</h5>
                                     <p>Rick Riordan</p>
                                     <div class="text-warning small justify-content-center d-flex mb-auto">
                                         <div class="bi-star-fill"></div>
@@ -486,7 +491,7 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    R$35,90<br>
+                                    R$38,90<br>
                                 </div>
                             </div>
                             <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
@@ -496,7 +501,7 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100 hover-card" id="cardShow">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">Mais vendido</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">Popular do Autor</div>
                             <img class="card-img-top d-flex h-100 rounded" src="https://m.media-amazon.com/images/I/81ibfYk4qmL._SL1500_.jpg" alt="..."/>
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -509,7 +514,7 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-half"></div>
                                     </div>
-                                    R$35,90<br>
+                                    R$48,90<br>
                                 </div>
                             </div>
                             <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
@@ -519,7 +524,6 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100 hover-card" id="cardShow">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">Mais vendido</div>
                             <img class="card-img-top d-flex h-100 rounded" src="https://m.media-amazon.com/images/I/71yJLhQekBL._SL1251_.jpg" alt="..."/>
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -532,7 +536,7 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-half"></div>
                                     </div>
-                                    R$35,90<br>
+                                    R$78,90<br>
                                 </div>
                             </div>
                             <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
@@ -552,6 +556,35 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card"); // pega todos os cards
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        // Pega a posição do card dentro da linha (coluna)
+        const colIndex = Array.from(entry.target.parentElement.parentElement.children)
+          .indexOf(entry.target.parentElement); 
+
+        // Define delay em função da coluna: 0.1s por posição
+        const delay = colIndex * 295; // 100ms por coluna
+
+        setTimeout(() => {
+          entry.target.classList.add("show"); // animação de aparecer
+        }, delay);
+
+        obs.unobserve(entry.target); // para de observar
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card)); // observa cada card
+});
+
+    </script>
 </html>
 <!--https://m.media-amazon.com/images/I/715JOcuqSSL._AC_UL480_FMwebp_QL65_.jpg-->
 <!-- quarto e despejo
