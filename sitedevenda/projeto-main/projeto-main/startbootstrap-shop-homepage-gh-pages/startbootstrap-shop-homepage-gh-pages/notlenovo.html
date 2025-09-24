@@ -13,11 +13,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://github.com/CrisEryk/CrisErykDesignerWeb1/tree/36138371dcadc3559c4bc61e40ceb73ec1ed5bf6/projeto-main/projeto-main/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
 body {
-    margin: 0; /* Remove espaço padrão do body */
     height: 300vh; /* Faz o fundo ocupar 100% da tela */
     
     /* Define a imagem */
@@ -69,12 +68,6 @@ cursor: pointer;
 
 #main {
 transition: margin-left .5s;
-}
-      /* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -205,13 +198,13 @@ body {
     <span class="openbtn" onclick="openNav()">☰ Menu</span>
 
     <script>
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    }
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        }
 
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
     </script>
 
             <div class="container px-4 px-lg-5">
@@ -267,53 +260,54 @@ body {
             
         </header>
         <!-- Section-->
-                <div class="container px-4 px-lg-2 mt-5">
-                    <div class="col mb-5">
-                        <div class="card h-10">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
-                            <div class="product-container">
-        
-        <!-- Miniaturas ao lado esquerdo -->
-        <div class="imagem-zoom">
-            <div class="image-options">
-                <div class="images-list">
-                    <img src="image/produtoprincipal.jpeg" alt="Imagem 1" onclick="lenovop.png">
-                    <img src="image/card1.jpeg" alt="Imagem 2" onclick="lenovop2.png">
-                    <img src="image/card2.jpeg" alt="Imagem 3" onclick="lenovop3.png">
-                    <img src="image/card3.jpeg alt=" alt=" Imagem 4" onclick="lenovop4.png">
+    <section>
+                        <div class="container px-4 px-lg-2 mt-5">
+                            <div class="col mb-5">
+                                <div class="card h-10">
+                                    <!-- Sale badge-->
+                                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                                    <div class="product-container">
+                
+                <!-- Miniaturas ao lado esquerdo -->
+                <div class="imagem-zoom">
+                    <div class="image-options">
+                        <div class="images-list">
+                            <img src="image/produtoprincipal.jpeg" alt="Imagem 1" onclick="lenovop.png">
+                            <img src="image/card1.jpeg" alt="Imagem 2" onclick="lenovop2.png">
+                            <img src="image/card2.jpeg" alt="Imagem 3" onclick="lenovop3.png">
+                            <img src="image/card3.jpeg alt=" alt=" Imagem 4" onclick="lenovop4.png">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- Imagem principal -->
-        <div class="product-image">
-            <div class="image-zoom">
-                <img id="main-image" src="image/produtoprincipal.jpeg" alt="lenovo">
+                <!-- Imagem principal -->
+                <div class="product-image">
+                    <div class="image-zoom">
+                        <img id="main-image" src="image/produtoprincipal.jpeg" alt="lenovo">
+                    </div>
+                </div>
+
+            <!-- Informações do produto -->
+            <div class="product-details">
+                <h1></h1>
+                <p class="price">R$ 3.869,14</p>
+                <p class="description">
+                    Principais informações deste produto:
+                    Processador Intel Core i7-13620H; 16GB de memória RAM; SSD de 512GB; Tela de 15.3 polegadas; Placa de vídeo Intel UHD Graphics; Sistema operacional Windows 11 Home.
+                </p>
+                <div class="attributes">
+                    <p><strong>Cor:</strong> Preto</p>
+                    <p><strong>Tamanho:</strong> 42</p>
+                </div>
+                <button class="buy-button">Comprar agora</button>
             </div>
         </div>
 
-        <!-- Informações do produto -->
-        <div class="product-details">
-            <h1></h1>
-            <p class="price">R$ 3.869,14</p>
-            <p class="description">
-                Principais informações deste produto:
-                Processador Intel Core i7-13620H; 16GB de memória RAM; SSD de 512GB; Tela de 15.3 polegadas; Placa de vídeo Intel UHD Graphics; Sistema operacional Windows 11 Home.
-            </p>
-            <div class="attributes">
-                <p><strong>Cor:</strong> Preto</p>
-                <p><strong>Tamanho:</strong> 42</p>
-            </div>
-            <button class="buy-button">Comprar agora</button>
-        </div>
-    </div>
-
-    <script>
-        function changeImage(imageUrl) {
-            document.getElementById("main-image").src = imageUrl;
-        }
-    </script>
-         </section>
+            <script>
+                function changeImage(imageUrl) {
+                    document.getElementById("main-image").src = imageUrl;
+                }
+            </script>
+    </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2025</p></div>
