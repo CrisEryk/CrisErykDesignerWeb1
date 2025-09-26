@@ -42,11 +42,94 @@
             opacity: 0;
             position: translateY(0px);
         }
+.card {
+            opacity: 0;               /* invisível no início */
+            transform: translateY(30px); /* desce 30px */
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* animação suave */
+        }
 
+        /* Quando o JS adiciona a classe show */
+        .card.show {
+            opacity: 1;               /* torna visível */
+            transform: translateY(0); /* volta para a posição normal */
+        }
+
+        /* Hover dos cards continua funcionando */
+        .hover-card:hover {
+            box-shadow: 0px 11px 22px rgba(0,0,0,0.2);
+            transform: translateY(-15px) scale(1.024);
+            transition: transform 0.38s ease-in-out, box-shadow 0.38s ease-in-out;
+        }
         
+        /* Estilo do menu lateral */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #656565;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #000000;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #000000;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+}
+
+.openbtn {
+font-size: 20px;
+cursor: pointer;
+}
+
+#main {
+transition: margin-left .5s;
+}
     </style>
     <body class="bg-light">
         <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white; position: fixed; width: 100%; z-index: 20">
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="http://127.0.0.1:5500/bibliotecaAllora.html">Biblioteca</a>
+    <a href="#services">Serviços</a>
+    <a href="#clients">Clientes</a>
+    <a href="#contact">Contato</a>
+</div>
+
+    <span class="openbtn" onclick="openNav()">☰ Menu</span>
+
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+
+
+
         <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white; position: fixed; width: 100%; z-index: 2">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#!" style="color: white;">Biblioteca Allora</a>
@@ -99,6 +182,7 @@
                         </li>
                 </div>
             </div>
+        </nav>
         </nav>
         <!-- Header-->
         <header class="bg-light">
@@ -551,6 +635,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card"); // pega todos os cards
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        // Pega a posição do card dentro da linha (coluna)
+        const colIndex = Array.from(entry.target.parentElement.parentElement.children)
+          .indexOf(entry.target.parentElement); 
+
+        // Define delay em função da coluna: 0.1s por posição
+        const delay = colIndex * 295; // 100ms por coluna
+
+        setTimeout(() => {
+          entry.target.classList.add("show"); // animação de aparecer
+        }, delay);
+
+        obs.unobserve(entry.target); // para de observar
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card)); // observa cada card
+});
+
+    </script>
     </body>
 </html>
 <!--https://m.media-amazon.com/images/I/715JOcuqSSL._AC_UL480_FMwebp_QL65_.jpg-->

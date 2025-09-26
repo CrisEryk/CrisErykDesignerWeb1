@@ -186,7 +186,8 @@ body {
     <body>
         <!-- Navigation-->
         
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white; position: fixed; width: 100%; z-index: 2">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="color:white; position: fixed; width: 100%; left: -0px;
+        top: -3px;  z-index: 2">
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="http://127.0.0.1:5500/bibliotecaAllora.html">Biblioteca</a>
@@ -282,14 +283,18 @@ body {
                 <!-- Imagem principal -->
                 <div class="product-image">
                     <div class="image-zoom">
-                        <img id="main-image" src="image/produtoprincipal.jpeg" alt="lenovo">
+                         <img src="..//image/card1.jpeg" alt="Imagem ao Hover" class="hover-image">
+                        <img src="./image/card2.jpeg" alt="Imagem ao Hover" class="hover-image">
                     </div>
                 </div>
 
             <!-- Informações do produto -->
             <div class="product-details">
-                <h1></h1>
-                <p class="price">R$ 3.869,14</p>
+                
+                <span class="text-muted text-decoration-line-through price">R$4.559,05</span>
+                                    <span style="font-size: 25px; color: red;">15%OFF</span>
+                                    <br>
+                                    <span style="font-size: 20px;">R$4.274,05</span>
                 <p class="description">
                     Principais informações deste produto:
                     Processador Intel Core i7-13620H; 16GB de memória RAM; SSD de 512GB; Tela de 15.3 polegadas; Placa de vídeo Intel UHD Graphics; Sistema operacional Windows 11 Home.
@@ -309,7 +314,7 @@ body {
             </script>
     </section>
         <!-- Footer-->
-        <footer class="py-5 bg-dark">
+        <footer class="py-5 bg-dark" style=" position: absolute; width: 104%; left: -4%; height: 40%; ">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2025</p></div>
         </footer>
         <!-- Bootstrap core JS-->
