@@ -16,6 +16,13 @@
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
+.hover-card {
+    transition: transform 0.38s ease-in-out, box-shadow 0.38s ease-in-out;
+}
+.hover-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0px 11px 22px rgba(0,0,0,0.2);
+}
 body {
     margin: 0; /* Remove espaço padrão do body */
     height: 300vh; /* Faz o fundo ocupar 100% da tela */
@@ -52,7 +59,7 @@ transition: 0.3s;
 }
 
 .sidenav a:hover {
-color: #000000;
+color: #848282;
 }
 
 .sidenav .closebtn {
@@ -173,9 +180,9 @@ transition: margin-left .5s;
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 hover-card">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem; z-index: 1;">Item em Promoção!</div>
                             <!-- Product image-->
                              <div class="container mt-4">
                             <a href="http://127.0.0.1:5500/Iphone%20A17.html">
@@ -201,10 +208,10 @@ transition: margin-left .5s;
                                  </div>
 
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R$8520,00</span>
-                                    <span style="font-size: 16px; color: red;">15%OFF</span>
+                                    <span class="text-muted text-decoration-line-through"><b>R$8520,00</b></span>
+                                    <span style="font-size: 16px; color: red;"><b>15%OFF</b></span>
                                     <br>
-                                    R$7.242,00
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$</b> </span><span style="font-size: 18px;"><b>7.242</b></span><span style="position: relative; font-size: 10px; top: -8px;"><b>00</b></span>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -219,9 +226,9 @@ transition: margin-left .5s;
                     
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 hover-card">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem; z-index: 1;">Item em Promoção!</div>
                             <!-- Product image-->
                              <div class="container mt-4"><a href="http://127.0.0.1:5500/Apple%20Ipad%20Pro.html">
                             <img class="card-img-top d-flex h-90" src="https://m.media-amazon.com/images/I/61O0fOqY27L._AC_SL1000_.jpg" alt="..." /></a>
@@ -245,10 +252,10 @@ transition: margin-left .5s;
                                  </div>
 
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R$29.999,00</span>
-                                    <span style="font-size: 16px; color: red;">15%OFF</span>
+                                    <span class="text-muted text-decoration-line-through"><b>R$29.999,00</b></span>
+                                    <span style="font-size: 16px; color: red;"><b>15%OFF</b></span>
                                     <br>
-                                    R$25.549,15
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$</b> </span><span style="font-size: 18px;"><b>25.549</b></span><span style="position: relative; font-size: 10px; top: -8px;"><b>15</b></span>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -258,12 +265,12 @@ transition: margin-left .5s;
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 hover-card">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem; z-index: 1;">Item em Promoção!</div>
                             <!-- Product image-->
                              <div class="container mt-4">
-                            <img class="card-img-top d-flex h-95;" style="height: 120%;" src="https://m.media-amazon.com/images/I/713GzsYLBbL._AC_SL1500_.jpg" alt="..." />
+                            <a href="http://127.0.0.1:5500/notlenovo.html"> <img class="card-img-top d-flex h-95;" style="height: 120%;" src="https://m.media-amazon.com/images/I/713GzsYLBbL._AC_SL1500_.jpg" alt="..."/></a>
                             </div>
                             <br><br><br>
                             <hr class="mt-2">
@@ -286,11 +293,10 @@ transition: margin-left .5s;
                                  </div>
 
 
-
-                                    <span class="text-muted text-decoration-line-through">R$4.559,05</span>
-                                    <span style="font-size: 16px; color: red;">15%OFF</span>
+                                    <span class="text-muted text-decoration-line-through"><b>R$4.559,05</b></span>
+                                    <span style="font-size: 16px; color: red;"><b>15%OFF</b></span>
                                     <br>
-                                    R$4.274,05
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$</b> </span><span style="font-size: 18px;"><b>4.274</b></span><span style="position: relative; font-size: 10px; top: -8px;"><b>05</b></span>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -300,11 +306,11 @@ transition: margin-left .5s;
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-100 w-30">
+                        <div class="card h-100 hover-card w-30">
                             <!-- Product image-->
                              <div class="container mt-2">
-                            <img class="card-img-top d-flex h-80" style="height: 107%;" src="https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg" alt="..." />
-                            </div>
+                            <a href="http://127.0.0.1:5500/Echodot.html"> <img class="card-img-top d-flex h-80" style="height: 107%;" src="https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg" alt="..." />
+                            </div></a>
                             <br><br>
                             <hr>
                             <!-- Product details-->
@@ -313,7 +319,7 @@ transition: margin-left .5s;
                                     <!-- Product name-->
                                     <h5 class="fw-bolder" style="font-size: medium;">Echo Dot (Geração mais recente) | O Echo Dot com o melhor som já lançado | Cor Preta</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-warning mb-2; z-index 2;">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -321,16 +327,17 @@ transition: margin-left .5s;
                                         <div class="bi-star-half"></div>
                                         <div style="text-indent: 4px; color: black;">15.678</div>
                                     </div>
-                                                                     <div class="justify-content-center d-flex small text-warning mb-2"><div style="color: rgb(138, 137, 137);">4,3</div>
+                                        <div class="justify-content-center d-flex small text-warning mb-2"><div style="color: rgb(138, 137, 137);">4,3</div>
                                  </div>
 
                                     <!-- Product price-->
-                                    R$449,44
+                                     
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$ </b></span> <span style="font-size: 18px;"><b>449</b></span><span style="position: relative; font-size: 12px; top: -8px;"><b>44</b>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver mais</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://127.0.0.1:5500/Echodot.html">Ver mais</a></div>
                             </div>
                         </div>
                     </div>
@@ -342,13 +349,13 @@ transition: margin-left .5s;
                 <div class="container px-4 px-lg-5 mt-5">
                     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 hover-card">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem; z-index: 2; ">Item em Promoção!</div>
                             <!-- Product image-->
                             <div class="container mt-4">
-                            <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/71jDnDf3vXL._AC_SL1500_.jpg" alt="..." />
-                            </div>
+                            <a href="http://127.0.0.1:5500/PcGamerCompleto.html"> <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/71jDnDf3vXL._AC_SL1500_.jpg" alt="..." />
+                            </div></a>
                             
                             <hr>
                             <!-- Product details-->
@@ -365,28 +372,29 @@ transition: margin-left .5s;
                                         <div class="bi-star"></div>
                                         <div style="color: black; text-indent: 4px;">2.568</div>
                                     </div>
-                                                                     <div class="justify-content-center d-flex small text-warning mb-2"><div style="color: rgb(138, 137, 137);">3,7</div>
+                                     <div class="justify-content-center d-flex small text-warning mb-2"><div style="color: rgb(138, 137, 137);">4,2</div>
                                  </div>
 
 
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R$1.700,02</span> <span style="font-size: 16px; color: red;">15%OFF</span>
-                                    
-                                    R$1.255,56
+                                    <span class="text-muted text-decoration-line-through"><b>R$1.700,00</b></span>
+                                    <span style="font-size: 16px; color: red;"><b>15%OFF</b></span>
+                                    <br>
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$</b> </span><span style="font-size: 18px;"><b>1.255</b></span><span style="position: relative; font-size: 10px; top: -8px;"><b>56</b></span>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver mais</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://127.0.0.1:5500/PcGamerCompleto.html">Ver mais</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 hover-card">
                             <!-- Product image-->
                              <div class="container mt-3">
-                            <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/71fExkr1vWL._AC_SL1500_.jpg" alt="..." />
-                            </div>
+                            <a href="http://127.0.0.1:5500/Monitor.html"> <img class="card-img-top d-flex h-80" src="https://m.media-amazon.com/images/I/71fExkr1vWL._AC_SL1500_.jpg" alt="..." />
+                            </div></a>
                             <br><br>
                             <hr>
                             <!-- Product details-->
@@ -396,7 +404,7 @@ transition: margin-left .5s;
 
                                     <h5 class="fw-bolder" style="font-size: medium;">Samsung T350 - Monitor Gamer, 24", FHD, 75Hz, HDMI, VGA, Freesync, Preto </h5>
                                     <!-- Product price-->
-                                                                                                              <div class="d-flex justify-content-center small text-warning mb-2">
+                                                                                                              <div class="d-flex justify-content-center small text-warning mb-2; z-index 2;">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -404,28 +412,28 @@ transition: margin-left .5s;
                                         <div class="bi-star-half"></div>
                                         <div style="color: black; text-indent: 4px;">1.457</div>
                                     </div>
-                                                                     <div class="justify-content-center d-flex small text-warning mb-2"><div style="color: rgb(138, 137, 137);">4,8</div>
+                                    <div class="justify-content-center d-flex small text-warning mb-2"><div style="color: rgb(138, 137, 137);">4,8</div>
                                  </div>
 
 
-                                    R$600,00
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$ </b></span> <span style="font-size: 18px;"><b>449</b></span><span style="position: relative; font-size: 12px; top: -8px;"><b>44</b>
                                 </div>
                                 
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver mais</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://127.0.0.1:5500/Monitor.html">Ver mais</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 hover-card">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem; z-index: 1;">Item em Promoção!</div>
                             <!-- Product image-->
                              <div class="container">
-                            <img class="card-img-top d-flex h-80" style="height: 90% ;" src="https://m.media-amazon.com/images/I/61rH3f1ncrL._AC_.jpg" alt="..." />
-                            </div>
+                            <a href="http://127.0.0.1:5500/PCgamerMancer.html"> <img class="card-img-top d-flex h-80" style="height: 90% ;" src="https://m.media-amazon.com/images/I/61rH3f1ncrL._AC_.jpg" alt="..." />
+                            </div></a>
                             
                             <hr style="position: inherit; top: -1.5%;">
                             <!-- Product details-->
@@ -434,7 +442,7 @@ transition: margin-left .5s;
                                     <!-- Product name-->
                                     <h5 class="fw-bolder" style="font-size: medium;">PC Gamer Mancer | AMD Ryzen 5 5600 | RX 580 8GB | 16GB DDR4 | SSD 480GB | Fonte 500W 80 Plus</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-warning mb-2; z-index 2;">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -446,24 +454,24 @@ transition: margin-left .5s;
                                  </div>
                                     
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">R$3.299,90</span>
-                                    <span style="font-size: 16px; color: red;">15%OFF</span>
+                                    <span class="text-muted text-decoration-line-through"><b>R$3.299,90</b></span>
+                                    <span style="font-size: 16px; color: red;"><b>15%OFF</b></span>
                                     <br>
-                                    R$2.699,90
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$</b> </span><span style="font-size: 18px;"><b>2.699</b></span><span style="position: relative; font-size: 10px; top: -8px;"><b>90</b></span>
                                 </div>
                             </div> 
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver mais</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://127.0.0.1:5500/PCgamerMancer.html">Ver mais</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div class="card h-100 hover-card">
                             <!-- Product image-->
                              <div class="container mt-5">
-                            <img class="card-img-top d-flex h-80" style="height: 100%;" src="https://m.media-amazon.com/images/I/61ft1gq785L._AC_SL1500_.jpg" alt="..." />
-                            </div>
+                            <a href="http://127.0.0.1:5500/TecladoKumara.html"> <img class="card-img-top d-flex h-80" style="height: 100%;" src="https://m.media-amazon.com/images/I/61ft1gq785L._AC_SL1500_.jpg" alt="..." />
+                            </div></a>
                             <br><br><br>
                             <hr>
                             <!-- Product details-->
@@ -473,7 +481,7 @@ transition: margin-left .5s;
                                     <h5 class="fw-bolder" style="font-size: medium;">
 Teclado Magnético Gamer Redragon Kumara Pro V2 RGB Preto Switch Vermelho K552RGB-PRO (PT-RED) V2</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-auto">
+                                    <div class="d-flex justify-content-center small text-warning mb-auto; z-index 2;">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -484,12 +492,12 @@ Teclado Magnético Gamer Redragon Kumara Pro V2 RGB Preto Switch Vermelho K552RG
                                     <div class="d-flex justify-content-center small text-warning mb-2">                            <div class="px-1" style=" color: rgb(138, 137, 137);">4,2</div>
 </div>
                                     <!-- Product price-->
-                                    R$407,55
+                                    <span style="position: relative; font-size: 12px; top: -8px;"><b>R$ </b></span> <span style="font-size: 18px;"><b>407</b></span><span style="position: relative; font-size: 12px; top: -8px;"><b>55</b>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver mais</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://127.0.0.1:5500/TecladoKumara.html">Ver mais</a></div>
                             </div>
                         </div>
                     </div>

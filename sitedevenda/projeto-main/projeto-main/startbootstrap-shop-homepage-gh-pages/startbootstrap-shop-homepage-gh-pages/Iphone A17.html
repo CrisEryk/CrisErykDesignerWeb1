@@ -45,13 +45,13 @@ body {
 padding: 8px 8px 8px 32px;
 text-decoration: none;
 font-size: 25px;
-color: #cdcccc;
+color: #d1d1d1;
 display: block;
 transition: 0.3s;
 }
 
 .sidenav a:hover {
-color: #000000;
+color: #848282;
 }
 
 .sidenav .closebtn {
@@ -70,14 +70,8 @@ cursor: pointer;
 transition: margin-left .5s;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    padding: 20px;
-}
-
 /* Layout principal com flex */
-.product-container {
+.productContainer {
     display: flex;
     align-items: flex-start;
     background-color: #fff;
@@ -89,29 +83,61 @@ body {
     gap: 20px;
 }
 
-/* MINIATURAS - agora à esquerda */
-.image-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 100px;
-}
+    .gallery {
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+    }
 
-.images-list img {
+    .thumbnails {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+    }
+
+    .thumbnails img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      border: 2px groove;
+      cursor: pointer;
+    }
+
+    .thumbnails img:hover {
+      border: 2px groove #000000;
+    }
+
+    .main-image {
+      width: 600px;
+      height: 600px;
+      border: 0.5px hidden #7c7c7c;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+          flex-shrink: 0;
+          object-fit: contain;
+
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+        .main-image img:hover {
     width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, border 0.3s ease;
-    border: 2px solid transparent;
-}
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    }
 
-.images-list img:hover {
-    transform: scale(1.05);
-    border-color: #ffab00;
-}
 
 /* IMAGEM PRINCIPAL COM ZOOM */
-.product-image {
+.productImage {
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
@@ -119,8 +145,8 @@ body {
 }
 
 .image-zoom {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     overflow: hidden;
     position: relative;
 }
@@ -137,25 +163,28 @@ body {
 }
 
 /* DETALHES DO PRODUTO */
-.product-details {
+.info {
     flex: 1;
     max-width: 600px;
-}
+    }
 
-.product-details h1 {
+    .info h1 {
     font-size: 2em;
     color: #333;
     margin-bottom: 10px;
-}
+    }
 
-.price {
-    font-size: 1.5em;
+    .info p {
+      color: #555;
+    }
+
+    .price {
+      font-size: 1.5em;
     color: #e53935;
     font-weight: bold;
     margin-bottom: 15px;
-}
-
-.description {
+    }
+    .description {
     font-size: 1em;
     color: #555;
     margin-bottom: 15px;
@@ -167,8 +196,8 @@ body {
     margin: 5px 0;
 }
 
-.buy-button {
-    background-color: #ffab00;
+    .buy-button {
+      background-color:  #292b2e;
     color: #fff;
     font-size: 1.1em;
     padding: 15px 25px;
@@ -176,11 +205,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
+    }
 
-.buy-button:hover {
-    background-color: #f57c00;
-}
+    .buy-button:hover {
+      background-color: #030303;
+    }
+
  </style>
     </head>
     <body>
@@ -265,54 +295,118 @@ body {
         </header>
         <!-- Section-->
     <section>
-                        <div class="container px-4 px-lg-2 mt-5 ">
+        <br><br>
+                        <div class="container px-4 px-lg-2 mt-5">
                             <div class="col mb-5">
-                                <div class="card h-10 ">
+                                <div class="card h-10">
                                     <!-- Sale badge-->
-                                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
-                                    <div class="product-container">
-                
-                <!-- Miniaturas ao lado esquerdo -->
-                <div class="imagem-zoom">
-                    <div class="image-options">
-                        <div class="images-list">
-                            <img class="mb-3" style="height: 130px;" src="images/IphoneA17.jpg" alt="Imagem 1" onclick="lenovop.png">
-                            <img class="mb-3" src="images/IphoneA17-2.jpg" alt="Imagem 2" onclick="https://m.media-amazon.com/images/I/61O0fOqY27L._AC_SL1000_.jpglenovop2.png">
-                            <img class="mb-3" style="height: 160px;" src="images/IphoneA17-4.jpg" alt="Imagem 3" onclick="IphoneA174.jpg">
-                            <img src="images/IphoneA17-5.jpg" style="height: 120px;" alt=" Imagem 4" onclick="lenovop4.png">
-                        </div>
-                    </div>
-                </div>
-                <!-- Imagem principal -->
-                <div class="product-image">
-                    <div class="image-zoom">
-                         <img style="width: 80%;" src="images/IphoneA17.jpg" alt="Imagem ao Hover" class="hover-image">
-                    </div>
-                </div>
+                                    <div class="productContainer">
+                                            <div class="gallery">
+                                                <div class="thumbnails" id="thumbnails">
+                                                <img src="images/IphoneA17.jpg"
+                                                        data-full="images/IphoneA17.jpg"
+                                                        alt="Vista 1" style="object-fit: contain;">
+                                                <img src="images/IphoneA17-2.jpg"
+                                                        data-full="images/IphoneA17-2.jpg"
+                                                        alt="Vista 2" style="object-fit: contain;">
+                                                <img src="images/IphoneA17-33.jpg"
+                                                        data-full="images/IphoneA17-33.jpg"
+                                                        alt="Vista 3">
+                                                <img src="images/IphoneA17-44.jpg"
+                                                        data-full="images/IphoneA17-44.jpg"
+                                                        alt="Vista 4" style="object-fit: contain;">
+                                                
+                                                    </div>
+                                                <div class="main-image image-zoom">
+                                                    
+                                                    <img id="mainImage"
+                                                            src="images/IphoneA17.jpg"
+                                                            alt="Imagem principal" style="object-fit: contain;">
+                                                </div>
+                                            </div>
 
-            <!-- Informações do produto -->
-            <div class="product-details">
-                
-                <span class="text-muted text-decoration-line-through price">R$11.249,10</span>
-                                    <span style="font-size: 25px; color: red;">15%OFF</span>
-                                    <br>
-                                    <span style="font-size: 20px;">R$5.624,55</span>
-                <p class="description">
-                O iPhone A17 combina desempenho avançado com design elegante. Equipado com o novo processador A17 Bionic, oferece velocidade superior para multitarefas, jogos e aplicativos exigentes. Sua tela OLED de 6,1 polegadas proporciona cores vibrantes e alta resolução. Conta com sistema de câmeras aprimorado para fotos e vídeos incríveis, bateria de longa duração e recursos de segurança avançados. Ideal para quem busca inovação, qualidade e tecnologia de ponta em um smartphone.
-                </p>
-                <div class="attributes">
-                    <p><strong>Cor:</strong> Lavanda</p>
-                    <p><strong>Tamanho:</strong> 16.34</p>
-                </div>
-                <button class="buy-button">Comprar agora</button>
-            </div>
-        </div>
+                                            <div class="info">
+                                             <div class="badge bg-dark text-white" style="position: relative; left: 1px; font-size: 80%; top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
+                                             <br>
+                                             <br>
 
-            <script>
-                function changeImage(imageUrl) {
-                    document.getElementById("main-image").src = imageUrl;
-                }
-            </script>
+                                                <h3>Iphone apple-iphone A17-lavender PRO.</h3>
+                                                <p class="description">O Iphone apple-iphone A17-lavender PRO combina design sofisticado com desempenho avançado. Equipado com processador de última geração, tela de alta resolução e câmeras potentes, oferece uma experiência premium para quem busca tecnologia, estilo e inovação.</p>
+                                                <hr>
+                                                <div class="attributes">
+                                                    <p><strong>Cor:</strong> Lavanda</p>  
+                                                    <p><strong>Capacidade de<br> armazenamento da<br> memória:</strong> 512GB </p>
+                                                    <p><strong>Marca:</strong> Apple</p>
+                                                    <span class="d-flex huge text-warning" style="color: orange;">
+                                                    <p><strong>Avaliações:</strong> <span style="color: orange;"> 5</span>
+                                                <span class="bi-star-fill" style="color: orange;"></span>
+                                                <span class="bi-star-fill" style="position: relative; left: -3px; color: orange;"></span>
+                                                <span class="bi-star-fill" style="position: relative; left: -5px; color: orange;"></span>
+                                                <span class="bi-star-fill" style="position: relative; left: -8px; color: orange;"></span>
+                                                <span class="bi-star-half" style="position: relative; left: -10px; color: orange;"></span>
+                                                <span style="position: relative; left: -12px; color: black;"> 20.587
+                                                </span></p>
+                                            
+                                            
+
+
+                                                </div>
+                                            <span><i class="fa-solid fa-truck-fast" style="color: #727070;"></i> Frete grátis para todo o Brasil em compras acima de R$199,00</span>
+                                            <div class="col-12" style=" position: relative; left: 0%; margin-bottom: 10px;">
+                                                <strong>Opções de pagamento:</strong>
+                                                <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
+                                                    <li style="color: #1a237e;"><i class="fa-regular fa-credit-card"></i> Cartão de crédito (Visa, MasterCard, Elo, Amex)</li>
+                                                    <li style="color: #388e3c;"><i class="fa-solid fa-barcode"></i> Boleto bancário</li>
+                                                    <li style="color: #00bfae;"><i class="fa-brands fa-pix"></i> Pix</li>
+                                                    <li style="color: #ffb300;"><i class="fa-solid fa-money-bill-wave"></i> Débito online</li>
+                                                    <li style="color: #c62828;"><i class="fa-solid fa-credit-card"></i> 2x sem juros no cartão</li>
+                                                </ul>
+                                            </div>
+                                            <hr>
+                                            <span class="text-muted text-decoration-line-through price" style="font-size: 20px;">R$8.520,00</span>
+                                            
+                                            <span class="ms-2" style="left: 0%; font-size: 23px; color: red;">15%OFF</span>
+                                            <br>
+                                            <span  style="color: #000000; font-size: 30px;"><span style="position: relative; font-size: 20px; top: -8px;">R$</span>7.242<span style="position: relative; font-size: 20px; top: -8px;">00</span></span>
+            
+                                            <br><br>
+                                            
+                                            <button class="buy-button" style="color: white;">Comprar agora</button>
+                                            <div style="margin-top: 20px; font-size: 14px; color: gray;">
+                                        </div>
+                                        
+                                            </div>
+                                        
+                                        </div>    
+                                    </div>
+
+                        <script>
+                            const thumbnailsContainer = document.getElementById('thumbnails');
+                            const thumbnails = thumbnailsContainer.querySelectorAll('img');
+                            const mainImage = document.getElementById('mainImage');
+
+                            // Guarda a imagem padrão
+                            const defaultImage = mainImage.src;
+
+                            thumbnails.forEach(thumb => {
+                            thumb.addEventListener('click', () => {
+                                const newSrc = thumb.getAttribute('data-full');
+                                mainImage.src = newSrc;
+                            });
+                            });
+
+                            // Quando o mouse sai da área das miniaturas, volta para a imagem padrão
+                        </script>
+    </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark" style=" position: absolute; width: 104%; left: -4%; height: 40%; ">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2025</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
     </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark" style=" position: absolute; width: 104%; left: -4%; height: 40%; ">

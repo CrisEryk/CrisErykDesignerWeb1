@@ -35,7 +35,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #212529;
+  background-color: #656565;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -45,13 +45,13 @@ body {
 padding: 8px 8px 8px 32px;
 text-decoration: none;
 font-size: 25px;
-color: #d1d1d1;
+color: #000000;
 display: block;
 transition: 0.3s;
 }
 
 .sidenav a:hover {
-color: #848282;
+color: #000000;
 }
 
 .sidenav .closebtn {
@@ -110,17 +110,14 @@ transition: margin-left .5s;
     }
 
     .main-image {
-      width: 600px;
-      height: 600px;
-      border: 0.5px hidden #7c7c7c;
+      width: 500px;
+      height: 500px;
+      border: 1px hidden #000000;
       border-radius: 10px;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-          flex-shrink: 0;
-          object-fit: contain;
-
     }
 
     .main-image img {
@@ -128,13 +125,6 @@ transition: margin-left .5s;
       height: 100%;
       object-fit: contain;
     }
-        .main-image img:hover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-    }
-
 
 /* IMAGEM PRINCIPAL COM ZOOM */
 .productImage {
@@ -303,58 +293,57 @@ transition: margin-left .5s;
                                     <div class="productContainer">
                                             <div class="gallery">
                                                 <div class="thumbnails" id="thumbnails">
-                                                <img src="images/IpadPro.jpg"
-                                                        data-full="images/IpadPro.jpg"
+                                                <img src="images/Monitor.jpg"
+                                                        data-full="images/Monitor.jpg"
                                                         alt="Vista 1" style="object-fit: contain;">
-                                                <img src="images/IpadPro2.jpg"
-                                                        data-full="images/Ipadpro2.jpg"
+                                                <img src="images/Monitor2n.jpg"
+                                                        data-full="images/Monitor2n.jpg"
                                                         alt="Vista 2" style="object-fit: contain;">
-                                                <img src="images/IpadPro3.jpg"
-                                                        data-full="images/IpadPro3.jpg"
-                                                        alt="Vista 3">
-                                                <img src="images/IpadPro4.jpg"
-                                                        data-full="images/IpadPro4.jpg"
-                                                        alt="Vista 4" style="object-fit: contain;">
+                                                <img src="images/Monitor3.jpg"
+                                                        data-full="images/Monitor3.jpg"
+                                                        alt="Vista 3" style="object-fit: contain;">
+                                                <img src="images/Monitor4.jpg"
+                                                        data-full="images/Monitor4.jpg"
+                                                        alt="Vista 3" style="object-fit: contain;">
                                                 
                                                     </div>
                                                 <div class="main-image image-zoom">
-                                                    
                                                     <img id="mainImage"
-                                                            src="images/IpadPro.jpg"
+                                                            src="images/Monitor.jpg"
                                                             alt="Imagem principal" style="object-fit: contain;">
                                                 </div>
                                             </div>
 
                                             <div class="info">
-                                             <div class="badge bg-dark text-white" style="position: relative; left: 1px; font-size: 80%; top: 0.5rem; right: 0.5rem">Item em Promoção!</div>
-                                             <br>
-                                             <br>
-
-                                                <h3>Apple iPad Pro Wi-Fi de 12,9 polegadas (Wi-Fi + Celular, 2 TB) - Prateado.</h3>
+                                                <h3>Samsung T350 - Monitor Gamer, 24", FHD, 75Hz, HDMI, VGA, Freesync, Preto.</h3>
                                                 <p class="description">
-                                                    O Apple iPad Pro de 12,9 polegadas (Wi-Fi + Celular, 2 TB) na cor Prateado oferece desempenho excepcional com o chip Apple M2, tela Liquid Retina XDR, suporte ao Apple Pencil (2ª geração) e armazenamento de 2 TB para máxima produtividade e criatividade. Ideal para profissionais e usuários exigentes que buscam mobilidade, potência e versatilidade em um só dispositivo.
-                                                </p></p>
+                                                    O Samsung T350 é um monitor gamer de 24 polegadas com resolução Full HD, taxa de atualização de 75Hz e tecnologia AMD FreeSync para imagens mais fluidas. Possui entradas HDMI e VGA, design moderno com bordas finas e base em Y, ideal para jogos e uso diário. Cor preta.
+                                                </p>
                                                 <hr>
                                                 <div class="attributes">
-                                                    <p><strong>Cor:</strong> Prata</p>
-                                                    <p><strong>Tamanho:</strong>12,9 polegadas</p> 
-                                                    <p><strong>Capacidade de<br> armazenamento da<br> memória:</strong> 2T </p>
-                                                    <p><strong>Marca:</strong> Apple</p>
+                                                    <p><strong>Cor:</strong> Preta</p>
+                                                    <p><strong>Tamanho da<br>Tela:</strong> 24 polegadas</p>
+                                                    <p><strong>resolução:</strong> FHD 1080p</p>  
+                                                    <p><strong>Proporção de<br>Tela:</strong> 16,9 </p>
+                                                    <p><strong>Marca:</strong>Samsung</p>
                                                     <span class="d-flex huge text-warning" style="color: orange;">
-                                                    <p><strong>Avaliações:</strong>
+                                                    <p><strong>Avaliações:</strong><span style="color: orange;"> 4,8</span>
+                                                <span class="bi-star-fill" style="color: orange;"></span>
                                                 <span class="bi-star-fill" style="color: orange;"></span>
                                                 <span class="bi-star-fill" style="position: relative; left: -3px; color: orange;"></span>
                                                 <span class="bi-star-fill" style="position: relative; left: -5px; color: orange;"></span>
                                                 <span class="bi-star-fill" style="position: relative; left: -8px; color: orange;"></span>
                                                 <span class="bi-star-half" style="position: relative; left: -10px; color: orange;"></span>
-                                                <span style="position: relative; left: -12px; color: black;"> 74.414
+                                                <span style="position: relative; left: -12px; color: black;"> 1.457
                                                 </span></p>
                                             
                                             
 
 
                                                 </div>
-                                            <span><i class="fa-solid fa-truck-fast" style="color: #727070;"></i> Frete grátis para todo o Brasil em compras acima de R$199,00</span>
+                                            <span>
+                                                <i class="fa-solid fa-truck-fast" style="color: #727070;"></i> Frete grátis para todo o Brasil em compras acima de R$199,00
+                                            </span>
                                             <div class="col-12" style=" position: relative; left: 0%; margin-bottom: 10px;">
                                                 <strong>Opções de pagamento:</strong>
                                                 <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
@@ -363,17 +352,17 @@ transition: margin-left .5s;
                                                     <li style="color: #00bfae;"><i class="fa-brands fa-pix"></i> Pix</li>
                                                     <li style="color: #ffb300;"><i class="fa-solid fa-money-bill-wave"></i> Débito online</li>
                                                     <li style="color: #c62828;"><i class="fa-solid fa-credit-card"></i> 2x sem juros no cartão</li>
+                                                </ul>
                                             </div>
-                                            <hr>
-                                            <span class="text-muted text-decoration-line-through price" style="font-size: 20px;">R$29.999,00</span>
+                                            <hr>                                            
                                             
-                                            <span class="ms-2" style="left: 0%; font-size: 23px; color: red;">15%OFF</span>
-                                            <br>
-                                            <span  style="color: #000000; font-size: 30px;"><span style="position: relative; font-size: 20px; top: -8px;">R$</span>25.549<span style="position: relative; font-size: 20px; top: -8px;">15</span></span>
+                                            <span style="color: #000000; font-size: 30px;">
+                                                <span style="position: relative; font-size: 20px; top: -8px;">R$</span>600<span style="font-size: 18px; position: relative; top: -8px;">00</span>
+                                            </span>
             
                                             <br><br>
                                             
-                                            <button class="buy-button" style="color: white;">Comprar agora</button>
+                                            <button class="buy-button">Comprar agora</button>
                                             <div style="margin-top: 20px; font-size: 14px; color: gray;">
                                         </div>
                                         
